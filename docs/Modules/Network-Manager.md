@@ -12,10 +12,8 @@ Supports wired ethernet, wifi, cellular data and VPN connections among others.
 ## Configuration
 
 > Type: `network_manager`
-
-| Name        | Type      | Default | Description             |
-|-------------|-----------|---------|-------------------------|
-| `icon_size` | `integer` | `24`    | Size to render icon at. |
+> 
+<% modules::network_manager::NetworkManagerModule %>
 
 <details>
   <summary>JSON</summary>

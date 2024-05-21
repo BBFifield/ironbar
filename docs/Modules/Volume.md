@@ -10,14 +10,11 @@ This requires PulseAudio to function (`pipewire-pulse` is supported).
 
 > Type: `volume`
 
-| Name                  | Type     | Default                | Description                                                                                                    |
-|-----------------------|----------|------------------------|----------------------------------------------------------------------------------------------------------------|
-| `format`              | `string` | `{icon} {percentage}%` | Format string to use for the widget button label.                                                              |
-| `max_volume`          | `float`  | `100`                  | Maximum value to allow volume sliders to reach. Pulse supports values > 100 but this may result in distortion. |
-| `icons.volume_high`   | `string` | `󰕾`                   | Icon to show for high volume levels.                                                                           |
-| `icons.volume_medium` | `string` | `󰖀`                   | Icon to show for medium volume levels.                                                                         |
-| `icons.volume_low`    | `string` | `󰕿`                   | Icon to show for low volume levels.                                                                            |
-| `icons.muted`         | `string` | `󰝟`                   | Icon to show for muted outputs.                                                                                |
+<% modules::volume::VolumeModule %>
+
+### Icons
+
+<% modules::volume::Icons { depth = 2 } %>
 
 <details>
 <summary>JSON</summary>

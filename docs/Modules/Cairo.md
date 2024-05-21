@@ -14,16 +14,11 @@ Scripts are automatically hot-reloaded.
 
 > Type: `cairo`
 
-| Name               | Type      | Default | Description                                        |
-|--------------------|-----------|---------|----------------------------------------------------|
-| `path`             | `string`  | `null`  | The path to the Lua script to load.                |
-| `frequency`        | `float`   | `200`   | The number of milliseconds between each draw call. |
-| `width`            | `integer` | `42`    | The canvas width in pixels.                        |
-| `height`           | `integer` | `42`    | The canvas height in pixels.                       |
+<% modules::cairo::CairoModule %>
 
-<details>
-<summary>JSON</summary>
+{% tabs %}
 
+{% tabitem label="JSON" %}
 ```json
 {
   "center": [
@@ -36,14 +31,10 @@ Scripts are automatically hot-reloaded.
     }
   ]
 }
-
 ```
+{% /tabitem }
 
-</details>
-
-<details>
-<summary>TOML</summary>
-
+{% tabitem label="TOML" %}
 ```toml
 [[center]]
 type = "cairo"
@@ -52,11 +43,9 @@ frequency = 100
 width = 300
 height = 300
 ```
-</details>
+{% /tabitem }
 
-<details>
-<summary>YAML</summary>
-
+{% tabitem label="YAML" %}
 ```yaml
 center:
 - type: cairo
@@ -65,12 +54,9 @@ center:
   width: 300
   height: 300
 ```
+{% /tabitem }
 
-</details>
-
-<details>
-<summary>Corn</summary>
-
+{% tabitem label="Corn" %}
 ```corn
 let { 
     $config_dir = ".config/ironbar" 
@@ -85,8 +71,8 @@ let {
     center = [ $cairo ] 
 }
 ```
-
-</details>
+{% /tabitem }
+{% /tabs %}
 
 ### Script
 

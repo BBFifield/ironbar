@@ -11,16 +11,11 @@ Clicking the widget opens the SwayNC panel.
 
 > Type: `notifications`
 
-| Name                | Type      | Default | Description                                                                                            |
-|---------------------|-----------|---------|--------------------------------------------------------------------------------------------------------|
-| `show_count`        | `boolean` | `true`  | Whether to show the current notification count.                                                        |
-| `icons.closed_none` | `string`  | `󰍥`    | Icon to show when the panel is closed, with no notifications.                                          |
-| `icons.closed_some` | `string`  | `󱥂`    | Icon to show when the panel is closed, with notifications.                                             |
-| `icons.closed_dnd`  | `string`  | `󱅯`    | Icon to show when the panel is closed, with DnD enabled. Takes higher priority than count-based icons. |
-| `icons.open_none`   | `string`  | `󰍡`    | Icon to show when the panel is open, with no notifications.                                            |
-| `icons.open_some`   | `string`  | `󱥁`    | Icon to show when the panel is open, with notifications.                                               |
-| `icons.open_dnd`    | `string`  | `󱅮`    | Icon to show when the panel is open, with DnD enabled. Takes higher priority than count-based icons.   |
+<% modules::notifications::NotificationsModule %>
 
+### Icons
+
+<% modules::notifications::Icons { depth = 2 } %>
 
 <details>
 <summary>JSON</summary>

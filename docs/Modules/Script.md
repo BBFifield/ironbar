@@ -8,11 +8,7 @@ For more advanced use-cases, use [custom](custom).
 
 > Type: `script`
 
-| Name       | Type                  | Default | Description                                             |
-|------------|-----------------------|---------|---------------------------------------------------------|
-| `cmd`      | `string`              | `null`  | Path to the script on disk                              |
-| `mode`     | `'poll'` or `'watch'` | `poll`  | See [#modes](#modes)                                    |
-| `interval` | `number`              | `5000`  | Number of milliseconds to wait between executing script |
+<% modules::script::ScriptModule %>
 
 ### Modes
 

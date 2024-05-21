@@ -9,15 +9,14 @@ Three types of scripts exist: polling, oneshot and watching:
   Normally they will repeat this at an interval, hence the name, although in some cases they may only run on a user
   event.
   If the script exited code 0, the `stdout` will be used. Otherwise, `stderr` will be printed to the log.
-- **Oneshot** scripts are a variant of polling scripts. 
-  They wait for script to exit, and may do something with the output, but are only fired by user events instead of the interval.
-  Generally options that accept oneshot scripts do not support the other types.
 - **Watching** scripts start a long-running process. Every time the process writes to `stdout`, the last line is captured
   and used.
+- **Oneshot** scripts are a variant of polling scripts.
+    They wait for script to exit, and may do something with the output, but are only fired by user events instead of the interval.
+    Generally options that accept oneshot scripts do not support the other types.
+    Oneshot scripts only support shorthand syntax and do not accept mode/interval parameters.
 
 One should prefer to use watch-mode where possible, as it removes the overhead of regularly spawning processes.
-That said, there are some cases which only support polling. These are indicated by `Script [polling]` as the option
-type.
 
 ## Writing script configs
 

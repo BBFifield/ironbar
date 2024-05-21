@@ -12,10 +12,7 @@ Displays system power information such as the battery percentage, and estimated 
 
 > Type: `upower`
 
-| Name        | Type      | Default         | Description                                       |
-|-------------|-----------|-----------------|---------------------------------------------------|
-| `format`    | `string`  | `{percentage}%` | Format string to use for the widget button label. |
-| `icon_size` | `integer` | `24`            | Size to render icon at.                           |
+<% modules::upower::UpowerModule %>
 
 <details>
 <summary>JSON</summary>
