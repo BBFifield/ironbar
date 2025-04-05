@@ -188,3 +188,6 @@ clap = { version = "4.5.34", features = ["derive"] }
 clap_complete = "4.5.47"
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = "1.0.140"
+
+[patch.crates-io]
+colpetto = { git = "https://github.com/verdiwm/colpetto" }
