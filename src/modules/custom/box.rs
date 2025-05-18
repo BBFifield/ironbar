@@ -6,6 +6,7 @@ use gtk::prelude::*;
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, Clone)]
+#[serde(rename_all = "lowercase")]
 #[cfg_attr(feature = "schema", derive(schemars::JsonSchema))]
 pub enum ModuleAlignment {
     /// Align widget to the start (left).
