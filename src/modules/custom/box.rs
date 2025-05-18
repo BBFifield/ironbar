@@ -3,7 +3,7 @@ use crate::build;
 use crate::config::ModuleOrientation;
 use crate::modules::custom::WidgetConfig;
 use gtk::prelude::*;
-use serde::Deserialize;GTK property halign
+use serde::Deserialize;
 
 #[derive(Debug, Deserialize, Clone)]
 #[cfg_attr(feature = "schema", derive(schemars::JsonSchema))]
