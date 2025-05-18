@@ -3,7 +3,7 @@ use crate::build;
 use crate::config::ModuleOrientation;
 use crate::modules::custom::WidgetConfig;
 use gtk::prelude::*;
-use serde::Deserialize;
+use serde::Deserialize;GTK property halign
 
 #[derive(Debug, Deserialize, Clone)]
 #[cfg_attr(feature = "schema", derive(schemars::JsonSchema))]
@@ -36,17 +36,21 @@ impl CustomWidget for BoxWidget {
 
     fn into_widget(self, context: CustomWidgetContext) -> Self::Widget {
         let container = build!(self, Self::Widget);
-
+    
         if let Some(orientation) = self.orientation {
             container.set_orientation(orientation.into());
         }
-
+    
         if let Some(widgets) = self.widgets {
             for widget in widgets {
                 widget.widget.add_to(&container, &context, widget.common);
             }
         }
-
+    
+        // Set halign property to center
+        container.set_halign(gtk::Align::Center);
+    
         container
     }
+
 }
